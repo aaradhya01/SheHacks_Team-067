@@ -22,14 +22,14 @@ const Main = () => {
     <Card
       className={classes.root}
       style={{
-        background: "linear-gradient(45deg, #ffdbe6 30%, #cff0ec 70%)",
+        background: "linear-gradient(45deg,45deg, #ffdbe6 30%, #cff0ec 70%)",
       }}
     >
       {" "}
-      <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
+      <CardHeader title="Finance Manager" subheader="Voice Enabled" />
       <CardContent>
         <Typography align="center" variant="h5">
-          Total Balance ${balance}
+          Total Balance ₹{balance}
         </Typography>
         <Typography
           variant="subtitle1"

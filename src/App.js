@@ -9,6 +9,7 @@ import { SpeechState, useSpeechContext } from "@speechly/react-client";
 
 import Main from "./components/Main/Main";
 import Details from "./components/Details/Details";
+import DetailsByDate from "./components/Details/DetailsByDate";
 import useStyles from "./styles";
 
 const App = () => {
@@ -31,45 +32,62 @@ const App = () => {
         spacing={0}
         alignItems="center"
         justify="center"
-        style={{ height: "100vh" }}
+        style={{ height: "70vh" }}
       >
         <Grid
           ref={main}
           item
           xs={12}
-          sm={7}
+          sm={8}
           className={classes.main}
-          style={{ paddingTop: 50 }}
+
         >
           <Main />
         </Grid>
-        <Grid item xs={12} sm={5} className={classes.mobile}>
+      </Grid>
+      <Grid
+        className={classes.grid}
+        container
+        spacing={0}
+        alignItems="center"
+        justify="center"
+        style={{ height: "60vh" }}
+      >
+        <Grid item xs={12} sm={4} className={classes.mobile}>
           <Details
             title="Income"
-            style={{
-              paddingBottom: 40,
-            }}
+
           />
         </Grid>
 
-        <Grid item xs={12} sm={5} className={classes.desktop}>
-          <Details title="Income" style={{ paddingBottom: 40 }} />
+        <Grid item xs={12} sm={4} className={classes.desktop}>
+          <Details title="Income" />
         </Grid>
         <Grid
           item
           xs={12}
-          sm={5}
+          sm={4}
           className={classes.last}
-          // style={{ paddingBottom: 10 }}
+        // style={{ paddingBottom: 10 }}
         >
-          <Details title="Expense" style={{ paddingBottom: 40 }} />
+          <Details title="Expense" />
         </Grid>
       </Grid>
 
-      <PushToTalkButtonContainer>
-        <PushToTalkButton />
-        <ErrorPanel />
-      </PushToTalkButtonContainer>
+
+      <Grid container spacing={4} alignItems="center" justify="center" style={{ height: '60vh' }}>
+        <Grid item xs={12} sm={4} className={classes.last}>
+          <DetailsByDate title="Income" />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.last}>
+          <DetailsByDate title='Expense' />
+        </Grid>
+
+        <PushToTalkButtonContainer>
+          <ErrorPanel />
+          <PushToTalkButton />
+        </PushToTalkButtonContainer>
+      </Grid>
     </div>
   );
 };

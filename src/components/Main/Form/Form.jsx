@@ -44,7 +44,6 @@ const Form = () => {
       amount: Number(formData.amount),
       id: uuidv4(),
     };
-    // setOpen(true);
     addTransaction(transaction);
     setFormData(initialState);
   };
