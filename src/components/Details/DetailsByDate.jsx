@@ -11,6 +11,9 @@ function DetailsByDate({ title }) {
         <Card className={title === 'Income' ? classes.income : classes.expense} >
             <CardHeader title={title} />
             <CardContent>
+                <Typography className={classes.pos} color="textPrimary">
+                    Today's
+                </Typography>
                 <Typography variant="h5">₹{total}</Typography>
                 <Pie data={chartData} />
             </CardContent>

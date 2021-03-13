@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import {
   PushToTalkButton,
   PushToTalkButtonContainer,
@@ -73,7 +73,6 @@ const App = () => {
           <Details title="Expense" />
         </Grid>
       </Grid>
-
 
       <Grid container spacing={4} alignItems="center" justify="center" style={{ height: '60vh' }}>
         <Grid item xs={12} sm={4} className={classes.last}>

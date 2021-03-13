@@ -22,7 +22,7 @@ const Main = () => {
     <Card
       className={classes.root}
       style={{
-        background: "linear-gradient(45deg,45deg, #ffdbe6 30%, #cff0ec 70%)",
+        background: "linear-gradient(45deg, #ffdbe6 30%, #ffdbe6 70%)",
       }}
     >
       {" "}

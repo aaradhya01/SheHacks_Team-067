@@ -7,6 +7,7 @@ import {
   FormControl,
   InputLabel,
   Select,
+  Box,
   MenuItem,
 } from "@material-ui/core";
 import { v4 as uuidv4 } from "uuid";
@@ -109,7 +110,7 @@ const Form = () => {
   console.log(formData);
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} >
       <CustomizedSnackbar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
         <Typography align="center" variant="subtitle2" gutterBottom>
@@ -165,16 +166,8 @@ const Form = () => {
           }
         />
       </Grid>
-      <Button
-        className={classes.button}
-        variant="outlined"
-        color="primary"
-        fullWidth
-        onClick={createTransaction}
-      >
-        Create
-      </Button>
-    </Grid>
+      <Button className={classes.button} variant="outlined" color="primary" fullWidth onClick={createTransaction}>Create</Button>
+    </Grid >
   );
 };
 

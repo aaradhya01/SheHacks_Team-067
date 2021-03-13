@@ -9,6 +9,8 @@ const Details = ({ title }) => {
   const classes = useStyles();
   const { total, chartData } = useTransactions(title);
 
+
+
   return (
     <Card className={title === "Income" ? classes.income : classes.expense}>
       <CardHeader
@@ -27,3 +29,6 @@ const Details = ({ title }) => {
 };
 
 export default Details;
+
+
+
